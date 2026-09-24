@@ -6,7 +6,7 @@ if the triangle all sides are diffrent then return "Scalene"
 */
 
 const checkTriangleType = (a, b, c) => {
-  if (a === b && b === c && c === a) {
+  if (a === b && b === c) {
     return "Equilateral";
   }
 
