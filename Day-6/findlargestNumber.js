@@ -7,18 +7,21 @@ const findLargestNum = (array = []) => {
     return false;
   }
 
-  let larger = null;
+  let largest = null;
 
   /*   method 1 (easy with the existing method ) */
-  // larger = Math.max(...array);
+  // largest = Math.max(...array);
 
   /*   method 2 */
-  for (const num of array) {
-    if (num > larger) {
-      larger = num;
-    }
-  }
-  return larger;
+  //   for (const num of array) {
+  //     if (num > largest) {
+  //       largest = num;
+  //     }
+  //   }
+
+  /*   method 3 */
+  largest = array.reduce((max, current) => Math.max(max, current), -Infinity);
+  return largest;
 };
 
 console.log(findLargestNum(arr));
